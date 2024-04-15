@@ -4,7 +4,7 @@ const settings = {
     frontity: {
       url: "https://test.frontity.org",
       title: "YEBO",
-      description: "WordPress installation for Frontity development",
+      description: "Een betere toekomst door onderwijs",
     },
   },
   packages: [
