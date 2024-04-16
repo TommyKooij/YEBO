@@ -15,12 +15,12 @@ const Footer = () => {
           <ListItem>Adres: De Vlierbes 63, Doetinchem</ListItem>
           <ListItem>RSIN (Fiscaal):</ListItem>
         </ContactList>
-        <SocialList>
+        {/* <SocialList>
           <SocialListItem src={twitter} />
           <SocialListItem src={facebook} />
           <SocialListItem src={instagram} />
           <SocialListItem src={linkedin} />
-        </SocialList>
+        </SocialList> */}
       </Container>
     </>
   );
@@ -32,14 +32,14 @@ const Container = styled.div`
   width: auto;
   height: 200px;
   background-color: black;
-  display: flex;
 `;
 
 const ContactList = styled.ul`
   color: white;
   list-style-type: none;
-  padding-top: 8px;
-  width: 200px;
+  padding-top: 4px;
+  margin: 4px;
+  width: 300px;
 `;
 
 const ListTitle = styled.h2`
@@ -54,6 +54,8 @@ const ListItem = styled.li`
 
 const SocialList = styled.div`
   list-style-type: none;
+  padding-left: 16px;
+  align-items: baseline;
 `;
 
 const SocialListItem = styled.img`
