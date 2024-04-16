@@ -21,8 +21,8 @@ const settings = {
             ["Doneer", "/category/doneer"],
           ],
           featured: {
-            showOnList: false,
-            showOnPost: false,
+            showOnList: true,
+            showOnPost: true,
           },
         },
       },

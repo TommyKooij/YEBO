@@ -5,6 +5,7 @@ import people from "../img/people.png";
 import school from "../img/school.png";
 import support from "../img/support.png";
 import testimonialIcon from "../img/testimonial_image.jpg";
+import Footer from "../ownComponents/footer";
 
 export function HomePage(props) {
   return (
@@ -52,12 +53,15 @@ export function HomePage(props) {
         <TestimonialIcon alt="testimonial_icon" src={testimonialIcon} />
         <div>
           <TestimonialText>
-            “YEBO changed my life. I had the opportunity to study engineering
-            and now I can support my family and community!”
+            <h4>
+              “YEBO changed my life. I had the opportunity to study engineering
+              and now I can support my family and community!”
+            </h4>
+            <h4>- Willem Fourie(21), Doctor</h4>
           </TestimonialText>
-          <TestimonialText>- name(age), job</TestimonialText>
         </div>
       </Testimonial>
+      <Footer />
     </Container>
   );
 }
@@ -99,7 +103,7 @@ const Button = styled.button`
 
 const Goal = styled.div`
   max-width: 100%;
-  padding-top: 16px;
+  padding-top: 8px;
   padding-bottom: 32px;
   box-sizing: border-box;
   align-items: center;
@@ -116,7 +120,7 @@ const GoalContent = styled.div`
 
 const Topics = styled.div`
   width: 100%;
-  padding: 0;
+  padding: 16px 0px 24px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -141,7 +145,7 @@ const Icon = styled.img`
 const Testimonial = styled.div`
   width: auto;
   height: auto;
-  padding: 24px;
+  padding: 36px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -155,7 +159,9 @@ const TestimonialIcon = styled.img`
   border-radius: 50%;
 `;
 
-const TestimonialText = styled.h4`
+const TestimonialText = styled.div`
   max-width: 400px;
-  padding-left: 36px;
+  padding-left: 18px;
+  margin-left: 18px;
+  border-left: 1px solid black;
 `;

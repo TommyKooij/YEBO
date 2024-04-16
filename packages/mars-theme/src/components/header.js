@@ -10,7 +10,7 @@ const Header = ({ state }) => {
         <StyledLink link="/">
           <Title>{state.frontity.title}</Title>
         </StyledLink>
-        <Description>{state.frontity.description}</Description>
+        {/* <Description>{state.frontity.description}</Description> */}
         <MobileMenu />
       </Container>
       <Nav />
@@ -34,7 +34,6 @@ const Container = styled.div`
 
 const Title = styled.h2`
   margin: 0;
-  margin-bottom: 16px;
 `;
 
 const Description = styled.h4`
