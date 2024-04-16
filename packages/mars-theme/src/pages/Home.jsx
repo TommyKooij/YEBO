@@ -4,6 +4,7 @@ import savanne from "../img/IMG_4826.jpg";
 import people from "../img/people.png";
 import school from "../img/school.png";
 import support from "../img/support.png";
+import testimonialIcon from "../img/testimonial_image.jpg";
 
 export function HomePage(props) {
   return (
@@ -47,7 +48,16 @@ export function HomePage(props) {
           </h3>
         </TopicCard>
       </Topics>
-      <Testimonial>lol</Testimonial>
+      <Testimonial>
+        <TestimonialIcon alt="testimonial_icon" src={testimonialIcon} />
+        <div>
+          <TestimonialText>
+            “YEBO changed my life. I had the opportunity to study engineering
+            and now I can support my family and community!”
+          </TestimonialText>
+          <TestimonialText>- name(age), job</TestimonialText>
+        </div>
+      </Testimonial>
     </Container>
   );
 }
@@ -129,8 +139,23 @@ const Icon = styled.img`
 `;
 
 const Testimonial = styled.div`
-  width: 100%;
+  width: auto;
   height: auto;
   padding: 24px;
-  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+`;
+
+const TestimonialIcon = styled.img`
+  width: 208px;
+  height: 208px;
+  border-radius: 50%;
+`;
+
+const TestimonialText = styled.h4`
+  max-width: 400px;
+  padding-left: 36px;
 `;
