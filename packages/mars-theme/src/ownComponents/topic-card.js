@@ -10,6 +10,8 @@ const TopicCard = ({ title, icon, text }) => {
   );
 };
 
+export default TopicCard;
+
 const Container = styled.div`
   width: 33.33%;
   height: 300px;
@@ -24,5 +26,3 @@ const Icon = styled.img`
   height: 40%;
   width: 33%;
 `;
-
-export default TopicCard;

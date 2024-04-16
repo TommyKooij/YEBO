@@ -7,6 +7,7 @@ import support from "../img/support.png";
 import testimonialIcon from "../img/testimonial_image.jpg";
 import Footer from "../ownComponents/footer";
 import TopicCard from "../ownComponents/topic-card";
+import Testimonial from "../ownComponents/testimonial";
 
 export function HomePage(props) {
   const CardTitles = ["Wie zijn wij?", "Wat doen wij?", "Steun ons!"];
@@ -16,6 +17,9 @@ export function HomePage(props) {
     "Samen met onze donateurs proberen wij kinderen in Schoemansdal een kans op onderwijs te geven.",
     "Steun ons en help kinderen in Zuid-Afrika met het krijgen van een studiefonds, omdat elk kind recht heeft op goede educatie.",
   ];
+  const TestimonialText =
+    "YEBO changed my life. I had the opportunity to study engineering and now I can support my family and community!";
+  const TestimonialUser = "- Willem Fourie(21), Doctor";
 
   return (
     <Container>
@@ -42,18 +46,12 @@ export function HomePage(props) {
           />
         ))}
       </Topics>
-      <Testimonial>
-        <TestimonialIcon alt="testimonial_icon" src={testimonialIcon} />
-        <div>
-          <TestimonialText>
-            <h4>
-              “YEBO changed my life. I had the opportunity to study engineering
-              and now I can support my family and community!”
-            </h4>
-            <h4>- Willem Fourie(21), Doctor</h4>
-          </TestimonialText>
-        </div>
-      </Testimonial>
+      <Testimonial
+        icon={testimonialIcon}
+        text={TestimonialText}
+        user={TestimonialUser}
+        key={0}
+      />
       <Footer />
     </Container>
   );
@@ -118,30 +116,4 @@ const Topics = styled.div`
   flex-direction: row;
   justify-content: center;
   border-top: 1px solid black;
-`;
-
-const Testimonial = styled.div`
-  width: auto;
-  height: auto;
-  padding: 36px 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid black;
-`;
-
-const TestimonialIcon = styled.img`
-  width: auto;
-  max-width: 208px;
-  height: auto;
-  max-height: 208px;
-  border-radius: 50%;
-`;
-
-const TestimonialText = styled.div`
-  max-width: 400px;
-  padding-left: 18px;
-  margin-left: 18px;
-  border-left: 1px solid black;
 `;
