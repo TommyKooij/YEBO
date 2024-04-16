@@ -31,32 +31,41 @@ const Container = styled.div`
   margin: 0;
 `;
 
-const Title = styled.h1`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: white;
-`;
-
 const StyledImage = styled.img`
   display: block;
-  height: auto;
+  height: 550px;
   width: 100%;
   object-fit: cover;
 `;
 
+const Title = styled.h1`
+  position: absolute;
+  bottom: 28px;
+  left: 48px;
+  color: white;
+  font-size: 40px;
+`;
+
 const Button = styled.button`
   position: absolute;
+  color: white;
+  border-color: white;
+  background-color: transparent;
   bottom: 0;
-  left: 0;
+  left: 48px;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   width: auto;
-  height: 20px;
+  font-size: 20px;
 `;
 
 const Goal = styled.div`
   width: 800px;
   max-width: 100%;
-  padding: 24px;
+  padding-top: 12px;
+  padding-bottom: 24px;
   box-sizing: border-box;
   justify-content: space-around;
   text-align: center;
