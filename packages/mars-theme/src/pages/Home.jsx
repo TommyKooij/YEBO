@@ -6,8 +6,17 @@ import school from "../img/school.png";
 import support from "../img/support.png";
 import testimonialIcon from "../img/testimonial_image.jpg";
 import Footer from "../ownComponents/footer";
+import TopicCard from "../ownComponents/topic-card";
 
 export function HomePage(props) {
+  const CardTitles = ["Wie zijn wij?", "Wat doen wij?", "Steun ons!"];
+  const CardIcons = [people, school, support];
+  const CardText = [
+    "YEBO is een non-profit organisatie die studiefondsen uitleent aan kansarme kinderen in Schoemansdal, Zuid-Afrika.",
+    "Samen met onze donateurs proberen wij kinderen in Schoemansdal een kans op onderwijs te geven.",
+    "Steun ons en help kinderen in Zuid-Afrika met het krijgen van een studiefonds, omdat elk kind recht heeft op goede educatie.",
+  ];
+
   return (
     <Container>
       <StyledImage alt={"cover"} src={savanne} />
@@ -24,30 +33,14 @@ export function HomePage(props) {
         </GoalContent>
       </Goal>
       <Topics>
-        <TopicCard>
-          <h2>Wie zijn wij?</h2>
-          <Icon alt="peope" src={people} />
-          <h3>
-            YEBO is een non-profit organisatie die studiefondsen uitleent aan
-            kansarme kinderen in Schoemansdal, Zuid-Afrika.
-          </h3>
-        </TopicCard>
-        <TopicCard>
-          <h2>Wat doen wij?</h2>
-          <Icon alt="school" src={school} />
-          <h3>
-            Samen met onze donateurs proberen wij kinderen in Schoemansdal een
-            kans op onderwijs te geven.
-          </h3>
-        </TopicCard>
-        <TopicCard>
-          <h2>Steun ons!</h2>
-          <Icon alt="support" src={support} />
-          <h3>
-            Steun ons en help kinderen in Zuid-Afrika met het krijgen van een
-            studiefonds, omdat elk kind recht heeft op goede educatie.
-          </h3>
-        </TopicCard>
+        {CardTitles.map((text, index) => (
+          <TopicCard
+            title={CardTitles[index]}
+            icon={CardIcons[index]}
+            text={CardText[index]}
+            key={index}
+          />
+        ))}
       </Topics>
       <Testimonial>
         <TestimonialIcon alt="testimonial_icon" src={testimonialIcon} />
@@ -125,21 +118,6 @@ const Topics = styled.div`
   flex-direction: row;
   justify-content: center;
   border-top: 1px solid black;
-`;
-
-const TopicCard = styled.div`
-  width: 33.33%;
-  height: 300px;
-  padding: 8px 16px;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Icon = styled.img`
-  height: 40%;
-  width: 33%;
 `;
 
 const Testimonial = styled.div`
