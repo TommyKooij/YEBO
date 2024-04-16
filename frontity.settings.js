@@ -14,10 +14,11 @@ const settings = {
         theme: {
           menu: [
             ["Home", "/"],
-            ["Nature", "/category/nature/"],
-            ["Travel", "/category/travel/"],
-            ["Japan", "/tag/japan/"],
-            ["About Us", "/about-us/"],
+            ["Over ons", "/category/over_ons/"],
+            ["Nieuws", "/category/nieuws/"],
+            ["Contact", "/category/contact/"],
+            ["Word Lid", "/category/word_lid"],
+            ["Doneer", "/category/doneer"],
           ],
           featured: {
             showOnList: false,
