@@ -35,7 +35,7 @@ export function HomePage(props) {
       <Topics>
         {CardTitles.map((text, index) => (
           <TopicCard
-            title={CardTitles[index]}
+            title={text}
             icon={CardIcons[index]}
             text={CardText[index]}
             key={index}
@@ -132,8 +132,10 @@ const Testimonial = styled.div`
 `;
 
 const TestimonialIcon = styled.img`
-  width: 208px;
-  height: 208px;
+  width: auto;
+  max-width: 208px;
+  height: auto;
+  max-height: 208px;
   border-radius: 50%;
 `;
 

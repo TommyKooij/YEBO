@@ -4,7 +4,7 @@ const TopicCard = ({ title, icon, text }) => {
   return (
     <Container>
       <h2>{title}</h2>
-      <Icon alt="people" src={icon} />
+      <Icon alt={title} src={icon} />
       <h3>{text}</h3>
     </Container>
   );
