@@ -14,11 +14,11 @@ const settings = {
         theme: {
           menu: [
             ["Home", "/"],
-            ["Over ons", "/category/over_ons/"],
+            ["Over Ons", "/over/"],
             ["Nieuws", "/category/nieuws/"],
             ["Contact", "/category/contact/"],
-            ["Word Lid", "/category/word_lid"],
-            ["Doneer", "/category/doneer"],
+            ["Word Lid", "/category/word_lid/"],
+            ["Doneer", "/category/doneer/"],
           ],
           featured: {
             showOnList: true,
