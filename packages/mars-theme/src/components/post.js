@@ -145,9 +145,9 @@ const Content = styled.div`
     text-align: center;
   }
 
-  //Added ul styling for the socials
-  ul {
-    list-style-type: none;
+  button {
+    text-decoration: none;
+    color: red;
   }
 
   img {
