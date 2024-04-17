@@ -96,7 +96,7 @@ export default connect(Post);
 const Container = styled.div`
   width: 800px;
   margin: 0;
-  padding: 24px;
+  padding: 0px;
 `;
 
 const Title = styled.h1`
@@ -134,8 +134,20 @@ const Content = styled.div`
     max-width: 100%;
   }
 
+  // Added h2 to center the text
+  h2,
+  h4 {
+    text-align: center;
+  }
+
   p {
     line-height: 1.6em;
+    text-align: center;
+  }
+
+  //Added ul styling for the socials
+  ul {
+    list-style-type: none;
   }
 
   img {

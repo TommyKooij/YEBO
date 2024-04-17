@@ -44,7 +44,7 @@ const FeaturedMedia = ({ state, id }) => {
 export default connect(FeaturedMedia);
 
 const Container = styled.div`
-  margin-top: 16px;
+  margin-top: 0px;
   height: 300px;
   ${({ isAmp }) => isAmp && "position: relative;"};
 `;
