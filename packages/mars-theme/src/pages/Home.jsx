@@ -9,7 +9,7 @@ import Footer from "../ownComponents/footer";
 import TopicCard from "../ownComponents/topic-card";
 import Testimonial from "../ownComponents/testimonial";
 
-export function HomePage(props) {
+export function HomePage() {
   //Made a card title, icons, and text variable.
   //The idea is that I'm going to loop through the title array and create a topic card component
   //for each unique value, then I'm going to give each topic card a title, icon, and text, depending
@@ -25,7 +25,7 @@ export function HomePage(props) {
   //I'm going to use a testimonial component and give that component the text and user info.
   //I mainly do it this way to make the code more readable
   const TestimonialText =
-    "YEBO changed my life. I had the opportunity to study engineering and now I can support my family and community!";
+    "'YEBO changed my life. I had the opportunity to study engineering and now I can support my family and community!'";
   const TestimonialUser = "- Willem Fourie(21), Doctor";
 
   return (
@@ -34,15 +34,15 @@ export function HomePage(props) {
       <Title>Een betere toekomst door onderwijs</Title>
       <Button>Help kinderen in Zuid-Afrika</Button>
       <Goal>
-        <GoalContent>
-          <h2>BIJDRAGEN AAN EEN BETERE TOEKOMST DOOR ONDERWIJS?</h2>
-          <h3>
-            Een vervolgopleiding is de sleutel tot een betere toekomst. Onze
-            stichting helpt jongeren uit kansarme gezinnen in Schoemansdal,
-            Zuid-Afrika, door het aanbieden van een studiefonds.
-          </h3>
-        </GoalContent>
+        <GoalTitle>BIJDRAGEN AAN EEN BETERE TOEKOMST DOOR ONDERWIJS?</GoalTitle>
+        <GoalText>
+          {" "}
+          Een vervolgopleiding is de sleutel tot een betere toekomst. Onze
+          stichting helpt jongeren uit kansarme gezinnen in Schoemansdal,
+          Zuid-Afrika, door het aanbieden van een studiefonds.
+        </GoalText>
       </Goal>
+      {/* Here I loop through the card titles array and make a topic card for each unique value */}
       <Topics>
         {CardTitles.map((text, index) => (
           <TopicCard
@@ -53,6 +53,7 @@ export function HomePage(props) {
           />
         ))}
       </Topics>
+      {/* Here I show a testimonial reference */}
       <Testimonial
         icon={testimonialIcon}
         text={TestimonialText}
@@ -105,15 +106,22 @@ const Goal = styled.div`
   padding-bottom: 32px;
   box-sizing: border-box;
   align-items: center;
-  color: black;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  text-align: center;
 `;
 
-const GoalContent = styled.div`
-  width: 800px;
-  text-align: center;
+const GoalTitle = styled.h2`
+  width: auto;
+  max-width: 800px;
+  color: rgba(12, 17, 43);
+`;
+
+const GoalText = styled.text`
+  width: auto;
+  max-width: 750px;
+  color: rgba(12, 17, 43, 0.8);
+  font-size: 20px;
 `;
 
 const Topics = styled.div`

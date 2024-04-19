@@ -20,6 +20,7 @@ export default Testimonial;
 
 const Container = styled.div`
   width: auto;
+  max-wdith: 400px;
   height: auto;
   padding: 36px 0px;
   display: flex;
