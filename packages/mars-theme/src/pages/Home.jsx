@@ -10,6 +10,10 @@ import TopicCard from "../ownComponents/topic-card";
 import Testimonial from "../ownComponents/testimonial";
 
 export function HomePage(props) {
+  //Made a card title, icons, and text variable.
+  //The idea is that I'm going to loop through the title array and create a topic card component
+  //for each unique value, then I'm going to give each topic card a title, icon, and text, depending
+  //on their index values
   const CardTitles = ["Wie zijn wij?", "Wat doen wij?", "Steun ons!"];
   const CardIcons = [people, school, support];
   const CardText = [
@@ -17,6 +21,9 @@ export function HomePage(props) {
     "Samen met onze donateurs proberen wij kinderen in Schoemansdal een kans op onderwijs te geven.",
     "Steun ons en help kinderen in Zuid-Afrika met het krijgen van een studiefonds, omdat elk kind recht heeft op goede educatie.",
   ];
+  //Made a testimonial text and user variables.
+  //I'm going to use a testimonial component and give that component the text and user info.
+  //I mainly do it this way to make the code more readable
   const TestimonialText =
     "YEBO changed my life. I had the opportunity to study engineering and now I can support my family and community!";
   const TestimonialUser = "- Willem Fourie(21), Doctor";

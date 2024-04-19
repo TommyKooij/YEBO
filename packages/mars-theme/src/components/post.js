@@ -55,16 +55,9 @@ const Post = ({ state, actions, libraries }) => {
         {/* Hide author and date on pages */}
         {!data.isPage && (
           <div>
-            {author && (
-              <StyledLink link={author.link}>
-                <Author>
-                  By <b>{author.name}</b>
-                </Author>
-              </StyledLink>
-            )}
             <DateWrapper>
               {" "}
-              on <b>{date.toDateString()}</b>
+              Published on <b>{date.toDateString()}</b>
             </DateWrapper>
           </div>
         )}
@@ -104,16 +97,7 @@ const Title = styled.h1`
   margin-top: 24px;
   margin-bottom: 8px;
   color: rgba(12, 17, 43);
-`;
-
-const StyledLink = styled(Link)`
-  padding: 15px 0;
-`;
-
-const Author = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-  display: inline;
+  text-align: center;
 `;
 
 const DateWrapper = styled.p`
@@ -134,8 +118,9 @@ const Content = styled.div`
     max-width: 100%;
   }
 
-  // Added h2 to center the text
+  // Added these to center the text
   h2,
+  h3,
   h4 {
     text-align: center;
   }
@@ -143,11 +128,6 @@ const Content = styled.div`
   p {
     line-height: 1.6em;
     text-align: center;
-  }
-
-  button {
-    text-decoration: none;
-    color: red;
   }
 
   img {
@@ -175,6 +155,10 @@ const Content = styled.div`
     background-color: rgba(0, 0, 0, 0.1);
     border-left: 4px solid rgba(12, 17, 43);
     padding: 4px 16px;
+  }
+
+  div {
+    text-align: center;
   }
 
   a {

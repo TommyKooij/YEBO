@@ -14,11 +14,11 @@ const settings = {
         theme: {
           menu: [
             ["Home", "/"],
-            ["Over Ons", "/over/"],
+            ["Over Ons", "/over-ons/"],
             ["Nieuws", "/category/nieuws/"],
-            ["Contact", "/category/contact/"],
-            ["Word Lid", "/category/word_lid/"],
-            ["Doneer", "/category/doneer/"],
+            ["Contact", "/contact/"],
+            ["Word Lid", "/word-lid/"],
+            ["Doneer", "/doneer/"],
           ],
           featured: {
             showOnList: true,
@@ -31,7 +31,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://yebo520.wordpress.com/wp-json",
+          url: "https://yebo520.wordpress.com",
         },
       },
     },
