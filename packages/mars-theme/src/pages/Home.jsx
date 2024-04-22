@@ -8,6 +8,7 @@ import testimonialIcon from "../img/testimonial_image.jpg";
 import Footer from "../ownComponents/footer";
 import TopicCard from "../ownComponents/topic-card";
 import Testimonial from "../ownComponents/testimonial";
+import Link from "../components/link";
 
 export function HomePage() {
   //Made a card title, icons, and text variable.
@@ -32,8 +33,10 @@ export function HomePage() {
     <Container>
       <StyledImage alt={"cover"} src={savanne} />
       <Title>Een betere toekomst door onderwijs</Title>
-      {/* This button is supposed to send users to the donate page */}
-      <Button>Help kinderen in Zuid-Afrika</Button>
+      {/* This button sends the user to the donate page */}
+      <StyledLink link="/doneer/">
+        <Button>Help kinderen in Zuid-Afrika</Button>
+      </StyledLink>
       <Goal>
         <GoalTitle>BIJDRAGEN AAN EEN BETERE TOEKOMST DOOR ONDERWIJS?</GoalTitle>
         <GoalText>
@@ -85,6 +88,10 @@ const Title = styled.h1`
   font-size: 40px;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 const Button = styled.button`
   position: absolute;
   color: white;
@@ -98,6 +105,9 @@ const Button = styled.button`
   display: inline-block;
   width: auto;
   font-size: 20px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Goal = styled.div`

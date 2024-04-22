@@ -51,7 +51,7 @@ const Theme = ({ state }) => {
         </Switch>
       </Main>
 
-      {/* Add a footer add the bottom of every page */}
+      {/* Add a footer at the bottom of every page */}
       <FootContainer>
         <Footer />
       </FootContainer>

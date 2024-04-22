@@ -89,7 +89,7 @@ export default connect(Post);
 const Container = styled.div`
   width: 800px;
   margin: 0;
-  padding: 0px;
+  padding: 0;
 `;
 
 const Title = styled.h1`
@@ -128,6 +128,7 @@ const Content = styled.div`
   p {
     line-height: 1.6em;
     text-align: center;
+    padding: 10px;
   }
 
   img {
