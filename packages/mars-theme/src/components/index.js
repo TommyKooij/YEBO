@@ -83,6 +83,7 @@ const HeadContainer = styled.div`
 
 //container for footer
 const FootContainer = styled.div`
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   background-color: black;

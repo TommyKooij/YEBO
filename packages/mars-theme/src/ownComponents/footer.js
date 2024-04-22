@@ -31,11 +31,11 @@ export default Footer;
 const Container = styled.div`
   width: auto;
   height: 200px;
-  background-color: black;
+  box-sizing: border-box;
+  color: #fff;
 `;
 
 const ContactList = styled.ul`
-  color: white;
   list-style-type: none;
   padding-top: 4px;
   margin: 4px;
@@ -50,19 +50,4 @@ const ListTitle = styled.h2`
 const ListItem = styled.li`
   margin: 8px;
   width: inherit;
-`;
-
-const SocialList = styled.div`
-  list-style-type: none;
-  padding-left: 16px;
-  align-items: baseline;
-`;
-
-const SocialListItem = styled.img`
-  display: inline;
-  height: 52px;
-  width: 52px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 1px solid white;
 `;
