@@ -7,6 +7,7 @@ import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
 import { HomePage } from "../pages/Home";
+import Footer from "../ownComponents/footer";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -49,6 +50,11 @@ const Theme = ({ state }) => {
           <PageError when={data.isError} />
         </Switch>
       </Main>
+
+      {/* Add a footer add the bottom of every page */}
+      <FootContainer>
+        <Footer />
+      </FootContainer>
     </>
   );
 };
@@ -73,6 +79,13 @@ const HeadContainer = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #1f38c5;
+`;
+
+//container for footer
+const FootContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: black;
 `;
 
 const Main = styled.div`

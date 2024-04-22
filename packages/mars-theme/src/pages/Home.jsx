@@ -32,6 +32,7 @@ export function HomePage() {
     <Container>
       <StyledImage alt={"cover"} src={savanne} />
       <Title>Een betere toekomst door onderwijs</Title>
+      {/* This button is supposed to send users to the donate page */}
       <Button>Help kinderen in Zuid-Afrika</Button>
       <Goal>
         <GoalTitle>BIJDRAGEN AAN EEN BETERE TOEKOMST DOOR ONDERWIJS?</GoalTitle>
@@ -60,7 +61,6 @@ export function HomePage() {
         user={TestimonialUser}
         key={0}
       />
-      <Footer />
     </Container>
   );
 }
